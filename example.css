@@ -47,7 +47,7 @@ li{
 	align-items: center;
 	margin-right: 20vh;
 }	
-.right p{
+.number{
 	margin-right: 40px;
 }
 .right a{
@@ -67,6 +67,7 @@ li{
 	border-top: 1px solid #efefef;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	margin-left: -20vh;
 }
 .topnav ul{
 	margin-top: 30px;
@@ -122,8 +123,8 @@ li{
 }
 .grid{
 	display: flex;
-	margin-right: 20vh;
-	margin-bottom: 100px;
+	padding-right: 20vh;
+	padding-bottom: 100px;
 }
 .grid-card{
 	background-color: #fff;
@@ -169,16 +170,103 @@ li{
 	background-color: #66c05d;
 	color: #fff;
 	margin-right: 30px;
+	margin-bottom: 132px;
+}
+.footer-card *{
+	margin-left: 40px;
 }
 .footer-card h1{
 	font-size: 18px;
 	color: #fff;
-	padding-top: 35px;
-	padding-bottom: 25px;
-	padding-left: 40px;
+	margin-top: 35px;
+	margin-bottom: 25px;
 }
 .footer-card p{
 	font-size: 14px;
-	margin-left: 40px;
 	max-width: 240px;
+}
+.footer-card1 img{
+	position: relative;
+	margin-top: -125px;
+	bottom: 17px;
+	left: 340px;
+}
+.footer-card1 input{
+	margin-top: 19px;
+	border-radius: 40px;
+	border: 0;
+	padding: 9px 104px 9px 25px;
+	font-size: 16px;
+}
+.footer-card2 p{
+	margin-bottom: 25px;
+}
+.footer-card2 a{
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 9px 28px 9px 29px;
+	border-radius: 40px;
+	transition: .2s;
+}
+.footer-card2 a:hover{
+	background-color: #fff;
+	color: #66c05d;
+}
+.footer1{
+	text-align: center;
+	margin-top: 37px;
+	margin-bottom: 38px;
+	display: flex;
+	align-items: center;
+}
+.social-networks{
+	display: flex;
+}
+.social-network{
+	border: 2px solid #66c05d;
+	border-radius: 100px;
+	margin-right: 20px;
+}
+.youtube{
+	padding: 15px 12px 15px 12px;
+}
+.vk{
+	padding: 15px 8px 15px 8px;
+}
+.facebook{
+	padding: 13px 12px 13px 12px;
+}
+.instagram{
+	padding: 12px 12px 12px 12px;	
+	margin-right: 0;
+}
+.address{
+	margin-left: 18vh;
+	font-size: 14px;
+}
+.footer1 .number{
+	margin-left: 8.75vh;
+}
+.footer1 .btn{
+	color: #66c05d;
+	border: 2px solid #66c05d;
+	border-radius: 40px;
+	transition: .2s;
+}
+.footer1 .btn:hover{
+	background-color: #66c05d;
+	color: #fff;
+}
+.footer2{
+	background-color: #efefef;
+	color: #828282;
+	display: flex;
+}
+.footer2 p{
+	font-size: 12px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.footer2 .copyright{
+	margin-right: 28.75vh;
 }
