@@ -270,3 +270,7 @@ li{
 .footer2 .copyright{
 	margin-right: 28.75vh;
 }
+
+@media screen(max-width: 960px){
+	
+}
