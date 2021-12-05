@@ -130,7 +130,7 @@ li{
 	background-color: #fff;
 	margin-right: 15px;
 	min-width: 235px;
-	height: 363px;
+	min-height: 363px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -156,6 +156,7 @@ li{
 	color: #fff;
 	border-radius: 40px;
 	transition: .2s;
+	margin-bottom: 10px;
 }
 .buy:hover{
 	background-color: #efefef;
@@ -178,8 +179,8 @@ li{
 .footer-card h1{
 	font-size: 18px;
 	color: #fff;
-	margin-top: 35px;
-	margin-bottom: 25px;
+	padding-top: 35px;
+	padding-bottom: 25px;
 }
 .footer-card p{
 	font-size: 14px;
@@ -189,10 +190,11 @@ li{
 	position: relative;
 	margin-top: -125px;
 	bottom: 17px;
-	left: 340px;
+	left: -10px;
 }
 .footer-card1 input{
 	margin-top: 19px;
+	margin-bottom: 10px;
 	border-radius: 40px;
 	border: 0;
 	padding: 9px 104px 9px 25px;
@@ -271,6 +273,120 @@ li{
 	margin-right: 28.75vh;
 }
 
-@media screen(max-width: 960px){
-	
+@media only screen and (max-width: 1100px){
+	.grid, .footer-cards{
+		flex-direction: column;
+	}
+	.grid{
+		padding-bottom: 0;
+	}
+	.grid-card{
+		width: 50vh;
+		margin-bottom: 20px;
+	}
+	.footer-cards, .footer1{
+		margin-left: -10vh;
+	}
+	.footer-card{	
+		min-width: 46vh;	
+		min-height: 212px;
+		margin-bottom: 50px;
+	}
+	.footer-card input{
+		padding-right: 8vh;
+	}
+	.footer-card img{
+		position: static;
+		float: right;
+		margin-right: 24px;
+		margin-top: -87px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.left img{
+		margin-left: -18vh;
+		width: 40px;
+	}
+	.left h1{
+		font-size: 25px;
+		margin-left: 1vh;
+	}
+	.right .number{
+		margin-left: 1vh;
+		font-size: 12px;
+		min-width: 10vh;
+	}
+	.right .button{
+		font-size: 12px;
+		min-width: 17vh;
+		padding: 8px 1vh 8px 4%;
+		flex-direction: column;
+		margin-left: -7vh;
+	}
+	.topnav ul li{
+		margin-right: 10px;
+	}
+	.topnav ul li a{
+		font-size: 13px;
+	}
+	.banner *{
+		margin-left: -10vh;
+	}
+	.content h2{
+		margin-left: -10vh;
+	}
+	.grid{
+		margin-left: -15vh;
+		text-align: center;
+	}
+	.grid-card{
+		max-width: 20vh;
+	}
+	.footer-card{
+		margin-left: -10vh;
+	}
+	.footer-card input{
+		padding: 5px 20px 5px 10px;
+		font-size: 12px;		
+	}
+	.footer-card h1{
+		font-size: 13px;
+		padding-top: 35px;
+		padding-bottom: 25px;
+	}
+	.footer-card p{
+		font-size: 10px;
+		max-width: 130px;
+	}
+	.footer-card img{
+		width: 100px;
+		height: 100px;
+	}
+	.footer1{
+		flex-direction: column;
+	}
+	.social-networks{
+		margin-left: -10vh;
+		text-align: center;
+	}
+	.address{
+		margin-top: 20px;
+		margin-left: -14vh;
+	}
+	.footer1 .number{
+		margin-top: 10px;
+		margin-left: -24vh;
+	}
+	.footer1 .btn{
+		margin-top: 10px;
+		margin-left: -20vh;
+	}
+	.footer2 .copyright{
+		max-width: 30vh;
+		margin-left: -16vh;
+	}
+	.footer2 .rules{
+		margin-left: -26vh;
+		max-width: 10vh;
+	}
 }
