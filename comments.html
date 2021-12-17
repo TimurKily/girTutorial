@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: #DEE4FF;
+      margin: 20px;
+    }
+    #name{
+      padding-left: 8px;
+      margin-top: 5px;
+      background-color: transparent;
+      width: 150px;
+      height: 30px;
+      font-size: 15px;
+      border: 0;
+      border-bottom: 3px solid #103a65;
+      outline: none;
+    }
+    #text{
+      font-family: 'sans-serif';
+      margin-top: 10px;
+      padding: 5px 0px 0px 5px;
+      display: block;
+      background-color: transparent;
+      width: 300px;
+      height: 80px;
+      border: 3px solid #103a65;
+      outline: none;
+    }
+    #submit{
+      margin-top: 10px;
+      width: 100px;
+      height: 35px;
+      background-color: #235d9c;
+      border: 3px solid #103a65;
+    }
+    #submit:hover{
+      filter: brightness(120%);
+    }
+    #comments{
+      font-family: "Times New Roman";
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .comment{
+      max-width: 295px;
+      border: 2px solid #103a65;
+      margin-top: 5px;
+      word-wrap: break-word;
+      padding: 8px 0px 8px 5px;
+      font-size: 15px;
+    }
+    #number{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add comment</h1>
+  <input type="text" id="name" placeholder="Ваше имя">
+  <textarea type="text" id="text" placeholder="Ваш комментарий"></textarea>
+  <button id="submit">Добавить</button>
+  <p id="comments">Комментарии (<span id="number">0</span>)</p>
+  <p id="commentsq">Здель пока нет комментариев</p>
+  <script>
+    var len=0;
+    if(len==0) document.getElementById('commentsq').style.display="block";
+    submit.onclick=()=>{
+      var input=document.getElementById('text').value;
+      var name=document.getElementById('name').value;
+      if(input!="" && name!=""){
+        len++;
+        var div=document.createElement('div');
+        var del=document.createElement('button');
+        var b=document.createElement('b');
+        var p=document.createElement('p');
+
+        div.className="comment";
+        div.id=`comment${len}`;
+        b.innerHTML=name;
+        p.innerHTML=input;
+        p.style.marginTop="4px";
+
+        del.innerHTML="&#10006;"
+        del.id=`${len}`;
+        del.onclick=delet;
+        del.style.position="relative";
+        del.style.float="right";
+        del.style.bottom+=`${47}px`;
+        del.style.right="5px";
+        del.style.backgroundColor="transparent";
+        del.style.color="red";
+        del.style.border="none";
+
+        document.body.append(div);
+        document.getElementById(`comment${len}`).append(b);
+        document.getElementById(`comment${len}`).append(p);
+        document.getElementById(`comment${len}`).append(del);
+        document.getElementById("number").innerHTML=len;
+        document.getElementById('commentsq').style.display="none";
+      }
+    }
+    function delet(e){
+      len--;
+      document.getElementById(`comment${e.target.id}`).style.display="none";
+      document.getElementById("number").innerHTML=len;
+      if(len==0) document.getElementById('commentsq').style.display="block";
+    }
+  </script>
+</body>
+</html>
